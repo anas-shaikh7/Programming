@@ -1,0 +1,9 @@
+letters = {
+     "A": "_a", "B":"_b","C":"_c","D":"_d","E":"_e", "F":"_f","G":"_g","H":"_h","I":"_i","J":"_j","K":"_k","L":"_l", "M":"_m","N":"_n","O":"_o","P":"_p","Q":"_q","R":"_r","S":"_s","T":"_t","U":"_u","V":"_v","W":"_w","X":"_x","Y":"_y","Z":"_z"}
+name = input("camel case: ")
+
+for letter in letters:
+    if letter in name:
+        name = name.replace(letter, letters[letter])
+print(name)
+
