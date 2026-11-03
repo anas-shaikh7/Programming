@@ -1,0 +1,1 @@
+# to open interactive mode in  python open the terminal window and write python
