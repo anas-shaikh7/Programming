@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLADE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem;
+            background-color: #111;
+            border-bottom: 1px solid #444;
+        }
+        header div {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-size: 1.2rem;
+        }
+        header a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 2rem;
+            text-align: center;
+        }
+        main h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .product-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        .product-card {
+            background-color: #222;
+            border: 1px solid #444;
+            border-radius: 8px;
+            width: 220px;
+            text-align: center;
+            padding: 1rem;
+            box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+        }
+        .product-card img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        footer {
+            padding: 1rem;
+            text-align: center;
+            background-color: #111;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>BLADE</div>
+        <nav>
+            <a href="/home">Home</a>
+            <a href="/aboutus">About Us</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Make Your Life Easier</h1>
+        <p>Discover our amazing products that simplify your daily routine.</p>
+        <div class="product-section">
+            <div class="product-card">
+                <img src="https://via.placeholder.com/220" alt="Smart Vacuum Cleaner">
+                <h3>Smart Vacuum Cleaner</h3>
+                <p>Keep your home clean effortlessly with this smart vacuum cleaner.</p>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/220" alt="Wireless Headphones">
+                <h3>Wireless Headphones</h3>
+                <p>Experience high-quality sound and comfort with no wires.</p>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/220" alt="Electric Coffee Maker">
+                <h3>Electric Coffee Maker</h3>
+                <p>Make your mornings easier with a fresh cup of coffee at the push of a button.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Contact us here: <a href="tel:12345678911">123-456-78911</a> for job opportunities</p>
+        <p>&copy; 2025 BLADE. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+

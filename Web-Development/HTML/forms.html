@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+    }
+
+    form {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    form div {
+        margin-bottom: 15px;
+    }
+
+    label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    input, select, textarea, button {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input:focus, select:focus, textarea:focus {
+        border-color: #007BFF;
+        outline: none;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+
+    button {
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    input[type="radio"], input[type="checkbox"] {
+        width: auto;
+        margin-right: 10px;
+    }
+
+    input[type="checkbox"] + label, input[type="radio"] + label {
+        display: inline-block;
+        font-weight: normal;
+    }
+
+    p {
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+</style>
+
+
+<body>
+    <!-- Form starts here -->
+    <form action="/submit.php">
+        <!-- text input for Name -->
+        <div>
+            <lable for="name">Name</lable>
+            <input id="name" type="text" placeholder="Enter name" required>
+        </div>
+        <!-- Phone Input -->
+        <div>
+            <lable for="ph">Phone</lable>
+            <input id="ph" type="tel" placeholder="Enter Phone" required>
+        </div>
+        <div>
+            <!-- Email Input -->
+            <lable for="email">Email</lable>
+            <input id="email" type="email" placeholdder="Enter Email" required>
+        </div>
+        <div>
+            <!--  Password Input -->
+            <lable for="password">Password</lable>
+            <input id="password" type="password" placeholder="Enter Password" required>
+            <div>
+                <!-- Date Input -->
+                <div>
+                    <lable for="dob">Date of Birth</lable>
+                    <input id="dob" type="date" required>
+                </div>
+                <!-- Dropdown (Select input) for Gender -->
+                <div>
+                    <lable for="gender">Gender</lable>
+                    <select id="gender" required>
+                        <option value="" disabled selected>Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <!-- Radio buttons for Subscription Plan -->
+                <div>
+                    <p>Subscription Plan</p>
+                    <input id="basic" type="radio" name="Subscription" value="basic">
+                    <lable for="basic">Basic</lable>
+
+                    <input id="premium" type="radio" name="Subscription" value="premium">
+                    <lable for="premium">Premium</lable>
+
+                    <input id="vip" type="radio" name="Subscription" value="vip">
+                    <lable for="vip">VIP</lable>
+                </div>
+
+                <!-- Checkbox for agreeing to terms and conditions -->
+                <div>
+                    <input id="terms" type="checkbox" required>
+                    <lable for="terms">I agree to the following terms and conditions</lable>
+                </div>
+
+                <!-- Text Area for Comments -->
+                <div>
+                    <lable for="comments">Comments</lable>
+                    <textarea id="comments" placeholder="Enter your comments" rows="5"></textarea>
+                </div>
+                <!-- Submit Button -->
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+    </form> 
+    <!-- Form ends here -->
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media & Car Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .container {
+            margin-top: 20px;
+        }
+        a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            border-radius: 5px;
+        }
+        .youtube {
+            background-color: #FF0000;
+        }
+        .twitter {
+            background-color: #1DA1F2;
+        }
+        .instagram {
+            background-color: #E1306C;
+        }
+        a:hover {
+            opacity: 0.8;
+        }
+        canvas {
+            border: 1px solid black;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Follow Us on Social Media</h1>
+        <a class="youtube" href="https://www.youtube.com" target="_blank">YouTube</a>
+        <a class="twitter" href="https://www.twitter.com" target="_blank">Twitter</a>
+        <a class="instagram" href="https://www.instagram.com" target="_blank">Instagram</a>
+    </div>
+
+    <h2>Play the Car Game</h2>
+    <canvas id="carGameCanvas" width="600" height="400"></canvas>
+
+    <script>
+        const canvas = document.getElementById('carGameCanvas');
+        const ctx = canvas.getContext('2d');
+
+        let car = {
+            x: canvas.width / 2 - 25,
+            y: canvas.height - 60,
+            width: 50,
+            height: 30,
+            color: 'blue',
+            speed: 5
+        };
+
+        let keys = {};
+
+        function drawCar() {
+            ctx.fillStyle = car.color;
+            ctx.fillRect(car.x, car.y, car.width, car.height);
+        }
+
+        function clearCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+
+        function update() {
+            if (keys['ArrowLeft'] && car.x > 0) {
+                car.x -= car.speed;
+            }
+            if (keys['ArrowRight'] && car.x < canvas.width - car.width) {
+                car.x += car.speed;
+            }
+            if (keys['ArrowUp'] && car.y > 0) {
+                car.y -= car.speed;
+            }
+            if (keys['ArrowDown'] && car.y < canvas.height - car.height) {
+                car.y += car.speed;
+            }
+        }
+
+        function gameLoop() {
+            clearCanvas();
+            drawCar();
+            update();
+            requestAnimationFrame(gameLoop);
+        }
+
+        document.addEventListener('keydown', (e) => {
+            keys[e.key] = true;
+        });
+
+        document.addEventListener('keyup', (e) => {
+            keys[e.key] = false;
+        });
+
+        gameLoop();
+    </script>
+</body>
+</html>
+
