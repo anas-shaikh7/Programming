@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+    <style>
+        .container {
+            padding: 10px;
+            border: 2px solid black;
+            background-color: lightpink;
+            height: 50vh;
+            width: 50vw;
+
+
+        }
+
+        .box {
+
+            border: 2px solid black;
+            background-color: rgb(61, 122, 228);
+            height: 50px;
+            width: 100px;
+            /* transition-property: transform, height, background-color;
+transition-duration: 4s;
+transition-timing-function: ease;
+transition-delay:2s ; */
+            transition: all 4s cubic-bezier(0, 0.68, 0.36, 0.98) 1s;
+        }
+
+        .transition {
+            transform: translateX(500px) translateY(300px) scale(1.5);
+            background-color: green;
+            /* height: 25px; */
+        }
+
+        .paras {
+            font-size: 20px;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box transition"></div>
+    </div>
+
+    <div class="paras">
+        <p>Transition: To go from one state to another smoothly
+        <p>
+        <p>transition-property: transform;
+            transition-duration: xs;
+            transition-timing-function: ease;
+            transition-delay:xs;
+            <br>
+            This is how you give transition.
+        </p>
+        <p>transition-property: transform, scale, background-color; -- You can change multiple things at the same time
+        </p>
+        <p>Use dev tools to adjust the smoothness according to your preference</p>
+        <img height="80px" width="120px" src="time - devtools.png" alt="">
+        <p>transition: all 4s cubic-bezier(0, 0.68, 0.36, 0.98) 1s; -- shorthand tool to apply every property at the
+            same time </p>
+
+    </div>
+</body>
+
+</html>
