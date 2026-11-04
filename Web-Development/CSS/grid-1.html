@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grids</title>
+    <style>
+        .container {
+            height: 100vh;
+            width: 60vw;
+            border: 2px solid black;
+            display: grid;
+            /* grid-template-columns: 120px 100px; */
+            grid-template-columns: [first] 120px [second] 100px [third];
+            grid-template-rows: 70px 70px 70px;
+            /* grid-template-columns: 1fr 1fr 1fr; */
+            /* grid-template-columns: repeat(3, 1fr); */
+/* grid-template-columns: repeat(3, minmax(100px, 2fr)); */
+            /* grid-template-rows: 1fr 2fr; */
+            /* gap: 30px; ----> applies to both column and row */
+            
+            column-gap: 20px;
+            row-gap: 20px;
+            /* justify-content: stretch;   ---> Used when height and wwidth is not gived */
+            /* justify-items: center;
+            align-items: center; */
+            place-items: center;
+            /* align-content: end;
+            justify-content: center; */
+            place-content: center;
+        }
+
+        .box {
+            border: 2px solid green;
+            width: 60px;
+            height: 60px;
+
+        }
+
+        .box2 {
+            align-self: start;
+            justify-self: end;
+        }
+
+        /* 
+        .box1 {
+            grid-row: 1/3;
+            grid-column: first/third;
+            grid-row-start: 1;
+            grid-row-end: 3;
+
+        }
+
+        .box3 {
+            grid-row: 1/3;
+            grid-column: 1/3;
+        } */
+         .para
+        {
+            color: red;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+    </div>
+    <h2>Grid Properties</h2>
+    <div class="para">
+        <p>
+            grid-template-columns: and grid-template-rows: determine the number and size of columns and rows in a CSS
+            grid layout. For example, grid-template-columns: 120px 100px; creates two columns with widths of 120px and
+            100px, while grid-template-rows: 70px 70px 70px; creates three rows, each 70px tall.
+        </p>
+        
+        <p>
+            grid-row: 1/3 or grid-row-start: 1; grid-row-end: 3; both achieve the same result. The first is a shorthand
+            for specifying the start and end lines: Format: grid-row: start/end;
+        </p>
+        
+        <p>
+            justify-items and align-items are CSS grid container properties.
+            - justify-items controls the alignment of grid items along the row (inline) axis.
+            - align-items controls the alignment of grid items along the column (block) axis.
+            Both properties are set on the grid container, not on individual grid items.
+            <br>
+                place-items: center; – This property is a shorthand for setting both align-items and justify-items on the grid container. It centers grid items both vertically (block axis) and horizontally (inline axis) within their grid areas.
+        </p>
+        
+        <p>
+            align-self: start; and justify-self: end; are CSS item properties used to control the positioning of
+            individual grid items within their grid area.
+        </p>
+        <p>
+            align-content and justify-content are CSS grid container properties used to align the entire grid within the container when the grid does not fill all available space. 
+
+            - align-content positions the grid along the block (vertical) axis.
+            - justify-content positions the grid along the inline (horizontal) axis.
+
+            These properties only have an effect if the grid is smaller than the container.
+                place-content: center or something else; – This property is a shorthand for setting both align-content and justify-content in the grid container. It centers the grid both vertically (block axis) and horizontally (inline axis) within the container.
+        
+        </p>
+        <p>
+            grid-template-columns: repeat(3, 1fr); – Use <code>repeat()</code> to apply the same size to multiple columns or rows, which helps avoid repetition in your CSS.
+        </p>
+        <p>
+            grid-template-columns: repeat(3, minmax(100px, 2fr)); 
+            The `minmax()` function is useful when you want a grid track (column or row) to be flexible, but not shrink below or grow above certain limits. It comes in use when:
+
+- You want columns/rows to be responsive, but not smaller than a minimum or larger than a maximum.
+- You want to avoid items getting too small on small screens or too large on big screens.
+- You want to combine flexible sizing (`fr`) with fixed minimum or maximum values.
+
+This helps create layouts that are both flexible and user-friendly.
+        </p>
+    </div>
+</body>
+
+</html>

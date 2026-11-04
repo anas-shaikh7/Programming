@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hue Rotation Demo</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      height: 100vh;
+      background: #111;
+    }
+
+    .color-box {
+      width: 120px;
+      height: 120px;
+      background: red;
+      filter: hue-rotate(0deg);
+      transition: filter 1s;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #000;
+    }
+
+    .color-box:hover {
+      animation: rotateHue 4s linear infinite;
+    }
+
+    @keyframes rotateHue {
+      0%   { filter: hue-rotate(0deg); }
+      100% { filter: hue-rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="color-box" title="Hover me!"></div>
+</body>
+</html>

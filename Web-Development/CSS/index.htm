@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Properties</title>
+    <style>
+        * {
+            margin: 5px;
+            padding: 0;
+        }
+
+        p {
+            border: 3px solid blue;
+
+        }
+
+        div {
+            border: 3px solid blue;
+
+        }
+
+        .display {
+            border: 3px solid green;
+            display: inline-block;
+            margin: 45px;
+            padding: 45px;
+
+        }
+
+        .bobi {
+            border: 3px solid green;
+            display: inline-block;
+            margin: 45px;
+            padding: 45px;
+            /* display: none; */
+            /* visibility: hidden; */
+            display: flex;
+            justify-content: end;
+        }
+    </style>
+</head>
+
+<body>
+    <div>Div is a block level element, so it takes its entire width and If you include another div it will shift to the
+        next line and occuy the width of that line as you can see below</div>
+    <div>IMPORTANT: You can keep both the divs inline as well by using display property</div>
+    <p>NOTE: iF YOU WANT FROM ABOVE YOU USE INLINE-BLOCK OTHERWISE INLINE. TO MAKE NAV BARS YOU CAN USE display: inline</p>
+<p>Span is an inline element</p>
+    <p style="color: brown;">If you use diplsay: none; the block will be removed as well as the spaced it occupied but if you use visibility: hidden; the block gets hidden where as the space it occupied remains intact</p>
+    <div>
+        SEE BELOW
+    </div>
+
+    <div class="bobi">Home cmon hi hello boy </div>
+    <div class="display">About</div>
+    <span class="display">Contact</span>
+
+
+</body>
+
+</html>
